@@ -16,7 +16,7 @@ a range of features to enhance your debating experience. 🗣️✨
 
 🚀 Getting Started: 
 
-            1. Clone the Repository: git clone https://github.com/yourusername/debating-project.git
+            1. Clone the Repository: git clone https://github.com/Randika00/debating-project.git
             2. Install Dependencies: Navigate to the project directory and run pip install -r requirements.txt for Python dependencies.
             3. Run the Application: Start the application with python app.py and open your browser to http://localhost:5000.
 
