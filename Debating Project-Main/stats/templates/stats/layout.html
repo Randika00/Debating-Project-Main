@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>{% block title %}stats{% endblock %}</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link href="{% static 'stats/styles.css' %}" rel="stylesheet">
+  <link href="{% static 'stats/auth.css' %}" rel="stylesheet">
+  <link href="{% static 'stats/menu.css' %}" rel="stylesheet">
+  <link href="{% static 'stats/formpage.css' %}" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script language="JavaScript" type="text/javascript" src="{% static 'stats/menu.js' %}"></script>
+  <script language="JavaScript" type="text/javascript" src="{% static 'stats/getdata.js' %}"></script>
+</head>
+
+<body>
+
+  <!-- <div class="center">
+    <header>
+      <nav>
+        <div class="logo">stats</div>
+        <div class="menu">
+          <ul>
+            <li><a href="{% url 'index' %}">Index</a></li>
+            {% if user.is_authenticated %}
+            <li><a href="{% url 'logout_view' %}">Log Out</a></li>
+            {% else %}
+            <li><a href="{% url 'login_view' %}">Log in</a></li>
+            <li><a href="{% url 'register' %}">Register</a></li>
+            {% endif %}
+          </ul>
+        </div>
+
+          {% if user.is_authenticated %}
+          Signed in as <strong>{{ user.username }}</strong>.
+          {% else %}
+          Not signed in.
+          {% endif %}
+      </nav>
+    </header>
+  </div> -->
+
+<!-- Testing -->
+<nav class="navbar">
+  <div id="trapezoid">
+    <a class="sub-home" href="{% url 'index' %}">Home</a>
+    <a href="{% url 'getspeaks' %}" class="expandHome">Input Data</a>
+
+     <!-- <div class="subnav">
+     <button class="subnavbtn">Clients<i class="fa fa-caret-down"></i></button>
+       <div class="subnav-content">
+        <div id="subnav-trapezoid">
+          <a href="#Clients">Burger King</a>
+          <a href="#Clients">Southwest Airlines</a>
+          <a href="#Clients">Levi Strauss</a>
+        </div>
+       </div>
+    </div> -->
+  
+     <div class="subnav">
+     <button class="subnavbtn">Authenticate<i class="fa fa-caret-down"></i></button>
+       <div class="subnav-content">
+        <div class="subnav-trapezoid">
+          <a href="{% url 'login_view' %}">Login</a>
+          <a href="{% url 'logout_view' %}">Logout</a>
+          <a href="{% url 'register' %}">Register</a>
+         </div>
+       </div>
+      </div>
+    <a href="https://codepen.io/pec-man" class="expandHome">Contact</a>
+  </div>
+</nav>
+
+  {% block body %}
+  {% endblock %}
+</body>
+
+</html>

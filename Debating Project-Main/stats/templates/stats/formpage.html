@@ -1,0 +1,30 @@
+{% extends 'stats/layout.html' %}
+{% block body %}
+<div class="csvform">
+    <form method="POST" action="{% url 'getspeaks' %}">
+        <h4>Speaker Tab</h4>
+        {% csrf_token %}
+        <div>
+            <select name="org">
+                <option value="" disabled selected hidden>Organizer</option>
+                {% for i in ins %}
+                <option value={{i}}>{{i}}</option>
+                {% endfor %}
+            </select>
+            <input type="url" name="url" placeholder="tabbycat url eg. https://nmps.herokuapp.com" width="40">
+            <input type="text" name="slug" placeholder="slug eg. nmps2021" required="required" />
+            <input autofocus type="text" name="rounds" placeholder="No.of Rounds" required="required" />
+            <button type="submit" class="btn btn-primary btn-block btn-large" value="Submit">Confirm</button>
+        </div>
+        <div>
+            <textarea  name="scores" placeholder="CSV data eg.&#10;Rk	name	team	R1	R2	R3	R4	R5	Avg	Stdev	Num&#10;1	Chanidu Ratnayake	AC A	77.00	76.50	78.00	77.00	76.50	77	0.50	5&#10;2	Thithira Jayakody	Trinity A	76.00	76.50	75.50	77.00	76.00	76.20	0.51	5" required="required" rows="40" cols="90"></textarea>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+<select id="cars" name="cars" placeholder = "organizer">
+    <option value="volvo">Volvo</option>
+    <option value="fiat">Fiat</option>
+    <option value="audi">Audi</option>
+  </select>

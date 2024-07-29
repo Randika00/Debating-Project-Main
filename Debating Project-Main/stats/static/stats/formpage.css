@@ -1,0 +1,30 @@
+.csvform{
+	display: flex;
+	justify-content: center;
+}
+.csvform textarea{
+	width: 900px;
+}
+
+.csvform button{
+	width: 100px;
+	display: inline;
+	margin-left: 30px;
+	background-image: none;
+	background-color: transparent;
+	border: 2px solid black;
+}
+.csvform input[type=text]{
+	width: 150px;
+}
+.csvform input[type=url]{
+	width: 35%;
+}
+.csvform select{
+	width: 15%;
+	color: rgba(255, 255, 255, 0.566);
+}
+.csvform option{
+	background-color: black;
+}
+

@@ -1,0 +1,12 @@
+{% extends "stats/layout.html" %}
+
+{% block body %}
+<div>
+    <h1>Debaters</h1>
+    <ul>
+        {% for debater in debaters %}
+        <li>{{debater}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

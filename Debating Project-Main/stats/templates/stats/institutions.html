@@ -1,0 +1,12 @@
+{% extends "stats/layout.html" %}
+
+{% block body %}
+<div>
+    <h1>Institutions</h1>
+    <ul>
+        {% for ins in institutions %}
+        <li>{{ins.name}} : {{ins.code}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

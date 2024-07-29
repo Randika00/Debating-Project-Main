@@ -1,0 +1,36 @@
+{% extends "stats/layout.html" %}
+
+{% block body %}
+
+    {% if message %}
+        <div>{{ message }}</div>
+    {% endif %}
+
+    <!-- <form action="{% url 'login_view' %}" method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <input autofocus class="form-control" type="text" name="username" placeholder="Username">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="Password">
+        </div>
+        <input class="btnprimary" type="submit" value="Login">
+    </form>
+    <br><br><br>
+    Don't have an account? <a href="{% url 'register' %}">Register here.</a> -->
+
+    
+    <div class="login">
+        <h4>Login</h4>
+        <form method="post" action="{% url 'login_view' %}">
+            {% csrf_token %}
+            <input autofocus type="text" name="username" placeholder="Username" required="required" />
+            <input type="password" name="password" placeholder="Password" required="required" />
+            <button type="submit" class="btn btn-primary btn-block btn-large" value="Login">Let me in.</button>
+        </form>
+        <span class="haveaccount"> Don't have an account? <a href="{% url 'register' %}">Register here.</a></span>
+    </div>
+    <br><br><br>
+
+{% endblock %}
+

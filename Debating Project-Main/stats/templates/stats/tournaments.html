@@ -1,0 +1,12 @@
+{% extends "stats/layout.html" %}
+
+{% block body %}
+<div>
+    <h1>Tournaments </h1>
+    <ul>
+        {% for tournament in tournaments %}
+        <li>{{tournament}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

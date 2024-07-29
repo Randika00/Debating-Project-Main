@@ -1,0 +1,12 @@
+{% extends "stats/layout.html" %}
+{% block body %}
+<div style="background-color: white;">
+    <h1>Index</h1>
+    <ul>
+        <li><a href="{% url 'show_ins' %}">Institutions</a></li>
+        <li><a href="{% url 'showdebaters' %}">Debaters</a></li>
+        <li><a href="{% url 'showtourneys' %}">Tournaments</a></li>
+
+    </ul>
+</div>
+{% endblock %}

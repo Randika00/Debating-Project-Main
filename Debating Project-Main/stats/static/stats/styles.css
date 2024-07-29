@@ -1,0 +1,9 @@
+body {
+	min-width: 800px;
+	background: rgb(46,237,235);
+	background: radial-gradient(circle, rgba(46,237,235,1) 21%, rgba(0,124,149,1) 75%);
+	color: white;
+	margin: 0px;
+  }
+
+  ::placeholder{color: rgba(255, 255, 255, 0.566);}
